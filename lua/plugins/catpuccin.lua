@@ -5,8 +5,6 @@ return {
     priority = 999,
     name = "catppuccin",
     config = function()
-      local base16 = require("plugins.user.base46_catpuccin_highlight").base_16
-      local colors = require("plugins.user.base46_catpuccin_highlight").base_30
       require("catppuccin").setup({
         flavour = "mocha",
         background = {
@@ -92,84 +90,46 @@ return {
         },
         custom_highlights = function()
           return {
-            CmpItemAbbr = { fg = colors.white },
-            CmpItemAbbrMatch = { fg = colors.blue, bold = true },
-            CmpDoc = { bg = colors.darker_black },
-            CmpDocBorder = { fg = colors.darker_black, bg = colors.darker_black },
-            CmpPmenu = { bg = colors.black },
-            CmpSel = { link = "PmenuSel", bold = true },
-            -- cmp item kinds
-            CmpItemKindConstant = { fg = base16.base09 },
-            CmpItemKindFunction = { fg = base16.base0D },
-            CmpItemKindIdentifier = { fg = base16.base08 },
-            CmpItemKindField = { fg = base16.base08 },
-            CmpItemKindVariable = { fg = base16.base0E },
-            CmpItemKindSnippet = { fg = colors.red },
-            CmpItemKindText = { fg = base16.base0B },
-            CmpItemKindStructure = { fg = base16.base0E },
-            CmpItemKindType = { fg = base16.base0A },
-            CmpItemKindKeyword = { fg = base16.base07 },
-            CmpItemKindMethod = { fg = base16.base0D },
-            CmpItemKindConstructor = { fg = colors.blue },
-            CmpItemKindFolder = { fg = base16.base07 },
-            CmpItemKindModule = { fg = base16.base0A },
-            CmpItemKindProperty = { fg = base16.base08 },
-            CmpItemKindEnum = { fg = colors.blue },
-            CmpItemKindUnit = { fg = base16.base0E },
-            CmpItemKindClass = { fg = colors.teal },
-            CmpItemKindFile = { fg = base16.base07 },
-            CmpItemKindInterface = { fg = colors.green },
-            CmpItemKindColor = { fg = colors.white },
-            CmpItemKindReference = { fg = base16.base05 },
-            CmpItemKindEnumMember = { fg = colors.purple },
-            CmpItemKindStruct = { fg = base16.base0E },
-            CmpItemKindValue = { fg = colors.cyan },
-            CmpItemKindEvent = { fg = colors.yellow },
-            CmpItemKindOperator = { fg = base16.base05 },
-            CmpItemKindTypeParameter = { fg = base16.base08 },
-            CmpItemKindCopilot = { fg = colors.green },
-            CmpItemKindCodeium = { fg = colors.vibrant_green },
-            CmpItemKindTabNine = { fg = colors.baby_pink },
-            -- PmenuSel = { bg = "#282C34", fg = "NONE" },
-            -- Pmenu = { fg = "#C5CDD9", bg = "#22252A" },
-            --
-            -- CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
-            -- CmpItemAbbrMatch = { fg = "#82AAFF", bg = "NONE", bold = true },
-            -- CmpItemAbbrMatchFuzzy = { fg = "#82AAFF", bg = "NONE", bold = true },
-            -- CmpItemMenu = { fg = "#C792EA", bg = "NONE", italic = true },
-            --
-            -- CmpItemKindField = { fg = "#EED8DA", bg = "#B5585F" },
-            -- CmpItemKindProperty = { fg = "#EED8DA", bg = "#B5585F" },
-            -- CmpItemKindEvent = { fg = "#EED8DA", bg = "#B5585F" },
-            --
-            -- CmpItemKindText = { fg = "#C3E88D", bg = "#9FBD73" },
-            -- CmpItemKindEnum = { fg = "#C3E88D", bg = "#9FBD73" },
-            -- CmpItemKindKeyword = { fg = "#C3E88D", bg = "#9FBD73" },
-            --
-            -- CmpItemKindConstant = { fg = "#FFE082", bg = "#D4BB6C" },
-            -- CmpItemKindConstructor = { fg = "#FFE082", bg = "#D4BB6C" },
-            -- CmpItemKindReference = { fg = "#FFE082", bg = "#D4BB6C" },
-            --
-            -- CmpItemKindFunction = { fg = "#EADFF0", bg = "#A377BF" },
-            -- CmpItemKindStruct = { fg = "#EADFF0", bg = "#A377BF" },
-            -- CmpItemKindClass = { fg = "#EADFF0", bg = "#A377BF" },
-            -- CmpItemKindModule = { fg = "#EADFF0", bg = "#A377BF" },
-            -- CmpItemKindOperator = { fg = "#EADFF0", bg = "#A377BF" },
-            --
-            -- CmpItemKindVariable = { fg = "#C5CDD9", bg = "#7E8294" },
-            -- CmpItemKindFile = { fg = "#C5CDD9", bg = "#7E8294" },
-            --
-            -- CmpItemKindUnit = { fg = "#F5EBD9", bg = "#D4A959" },
-            -- CmpItemKindSnippet = { fg = "#F5EBD9", bg = "#D4A959" },
-            -- CmpItemKindFolder = { fg = "#F5EBD9", bg = "#D4A959" },
-            --
-            -- CmpItemKindMethod = { fg = "#DDE5F5", bg = "#6C8ED4" },
-            -- CmpItemKindValue = { fg = "#DDE5F5", bg = "#6C8ED4" },
-            -- CmpItemKindEnumMember = { fg = "#DDE5F5", bg = "#6C8ED4" },
-            --
-            -- CmpItemKindInterface = { fg = "#D8EEEB", bg = "#58B5A8" },
-            -- CmpItemKindColor = { fg = "#D8EEEB", bg = "#58B5A8" },
-            -- CmpItemKindTypeParameter = { fg = "#D8EEEB", bg = "#58B5A8" },
+            PmenuSel = { bg = "#282C34", fg = "NONE" },
+            Pmenu = { fg = "#C5CDD9", bg = "#22252A" },
+
+            CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
+            CmpItemAbbrMatch = { fg = "#82AAFF", bg = "NONE", bold = true },
+            CmpItemAbbrMatchFuzzy = { fg = "#82AAFF", bg = "NONE", bold = true },
+            CmpItemMenu = { fg = "#C792EA", bg = "NONE", italic = true },
+
+            CmpItemKindField = { fg = "#EED8DA", bg = "#B5585F" },
+            CmpItemKindProperty = { fg = "#EED8DA", bg = "#B5585F" },
+            CmpItemKindEvent = { fg = "#EED8DA", bg = "#B5585F" },
+
+            CmpItemKindText = { fg = "#C3E88D", bg = "#9FBD73" },
+            CmpItemKindEnum = { fg = "#C3E88D", bg = "#9FBD73" },
+            CmpItemKindKeyword = { fg = "#C3E88D", bg = "#9FBD73" },
+
+            CmpItemKindConstant = { fg = "#FFE082", bg = "#D4BB6C" },
+            CmpItemKindConstructor = { fg = "#FFE082", bg = "#D4BB6C" },
+            CmpItemKindReference = { fg = "#FFE082", bg = "#D4BB6C" },
+
+            CmpItemKindFunction = { fg = "#EADFF0", bg = "#A377BF" },
+            CmpItemKindStruct = { fg = "#EADFF0", bg = "#A377BF" },
+            CmpItemKindClass = { fg = "#EADFF0", bg = "#A377BF" },
+            CmpItemKindModule = { fg = "#EADFF0", bg = "#A377BF" },
+            CmpItemKindOperator = { fg = "#EADFF0", bg = "#A377BF" },
+
+            CmpItemKindVariable = { fg = "#C5CDD9", bg = "#7E8294" },
+            CmpItemKindFile = { fg = "#C5CDD9", bg = "#7E8294" },
+
+            CmpItemKindUnit = { fg = "#F5EBD9", bg = "#D4A959" },
+            CmpItemKindSnippet = { fg = "#F5EBD9", bg = "#D4A959" },
+            CmpItemKindFolder = { fg = "#F5EBD9", bg = "#D4A959" },
+
+            CmpItemKindMethod = { fg = "#DDE5F5", bg = "#6C8ED4" },
+            CmpItemKindValue = { fg = "#DDE5F5", bg = "#6C8ED4" },
+            CmpItemKindEnumMember = { fg = "#DDE5F5", bg = "#6C8ED4" },
+
+            CmpItemKindInterface = { fg = "#D8EEEB", bg = "#58B5A8" },
+            CmpItemKindColor = { fg = "#D8EEEB", bg = "#58B5A8" },
+            CmpItemKindTypeParameter = { fg = "#D8EEEB", bg = "#58B5A8" },
           }
         end,
       })
