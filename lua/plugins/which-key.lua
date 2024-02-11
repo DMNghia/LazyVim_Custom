@@ -2,13 +2,17 @@ return {
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
-    opts = function(_, opts)
-      opts.defaults = {
+    opts = {
+      icons = {
+        group = vim.g.icons_enabled and "" or "",
+        separator = "",
+      },
+      defaults = {
         mode = { "n", "v" },
-        ["g"] = { name = "+goto" },
-        ["gz"] = { name = "+surround" },
-        ["]"] = { name = "+next" },
-        ["["] = { name = "+prev" },
+        ["g"] = { name = "Goto" },
+        ["gz"] = { name = "Surround" },
+        ["]"] = { name = "Next" },
+        ["["] = { name = "Prev" },
         ["<leader><tab>"] = { name = "󰓩 Tabs" },
         ["<leader>b"] = { name = "󱂬 Buffer" },
         ["<leader>c"] = { name = "󱃖 Code" },
@@ -23,7 +27,7 @@ return {
         ["<leader>u"] = { name = " UI" },
         ["<leader>w"] = { name = "󱂬 Window" },
         ["<leader>x"] = { name = "󱃕 Diagnostics/Quickfix" },
-      }
-    end,
+      },
+    },
   },
 }
