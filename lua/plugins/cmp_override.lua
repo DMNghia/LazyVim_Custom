@@ -20,7 +20,7 @@ return {
       table.insert(opts.sources, { name = "nvim_lsp_signature_help" })
       require("cmp").setup({
         completion = {
-          completeopt = "menu,menuone,noinsert",
+          completeopt = "menu,menuone,noinsert,noselect",
         },
         window = {
           completion = {
