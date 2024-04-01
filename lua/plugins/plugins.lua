@@ -128,7 +128,7 @@ return {
     config = function()
       require("lualine").setup({
         options = {
-          omponent_separators = { left = "", right = "" },
+          component_separators = { left = "", right = "" },
           section_separators = { left = "", right = "" },
         },
       })
